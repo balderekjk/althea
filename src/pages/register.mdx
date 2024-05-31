@@ -1,0 +1,83 @@
+---
+---
+import Layout from '../layouts/Layout.astro';
+
+<Layout title="NHEA - registration">
+
+<h1 class="font-[400] text-[olivedrab]">2024 NHEA Convention Registration</h1>
+
+To register, please complete the form below. We highly recommend using an email address only once for each registered person to prevent possible registration issues. The registration fee for this convention is $300 per person.
+
+Notice for @hawaii.edu emails: The auto-confirmation email containing a record of your responses may be delayed (est. 1 day). Mahalo for your support and understanding.
+
+<form class="[&>label>p:first-child]:mb-2 border-solid rounded-lg px-4 pb-4 mx-auto border-2 border-[silver] shadow-md [&_input:not([type='radio'])]:w-full [&_input]:box-border [&_input]:p-1 [&_input]:font-sans [&_input]:text-[16px] [&_input]:shadow-sm [&_input]:accent-[darkgreen] sm:w-[600px] w-full box-border">
+  <h3>Registrant Information</h3>
+  <p>asterisk (*) means required</p>
+  <hr />
+  <label>
+    First Name*
+    <input name="first_name" type="text" required />
+  </label>
+  <label>
+    Last Name*
+    <input name="last_name" type="text" required />
+  </label>
+  <label>
+    Email*
+    <input name="email" type="email" required />
+  </label>
+  <label>
+    Organization or Affiliation*
+    <input name="organization" type="text" required />
+  </label>
+  <label>
+    Position Title*
+    <input name="position" type="text" required />
+  </label>
+  <label>
+    City*
+    <input name="city" type="text" required />
+  </label>
+  <label>
+    State*
+    <input name="state" type="text" required />
+  </label>
+  <label>
+    Zip Code*
+    <input name="zip" type="text" required />
+  </label>
+  <label>
+    Phone Number*
+    <input name="phone" type="tel" required />
+    <p class="text-gray-700 mt-0">numbers only</p>
+  </label>
+  <h3 class="mb-2">Payment Method*</h3>
+  <p class="text-gray-700 mt-0">\*\*Only One Purchase Per Person/Email/Submission*<br />NHEA Convention Registration is $300<br />If paying with Cash, Check, or Purchase Order, direct your payment to:<br />NHEA<br />P.O. Box 1190<br />Wailuku, HI 96793</p>
+  <hr />
+  <label>
+    <input type="radio" name="payment_method" value="PayPal" />
+    <span>PayPal</span>
+    <p class="text-gray-700 mt-1">Submit this form and yellow PayPal button will appear below</p>
+  </label>
+  <label>
+    <input type="radio" name="payment_method" value="Cash" />
+    <span>Cash</span>
+    <p class="text-gray-700 mt-1">See above for address or have it ready on day of event</p>
+  </label>
+  <label>
+    <input type="radio" name="payment_method" value="Check" />
+    <span>Check</span>
+    <p class="text-gray-700 mt-1">See above for address or have it ready on day of event</p>
+  </label>
+  <label>
+    <input type="radio" name="payment_method" value="Cash" />
+    <span>Cash</span>
+    <p class="text-gray-700 mt-1">If known, please enter PO No. below; see above for address</p>
+  </label>
+  <label>
+    Purchase Order No.
+    <input name="purchase_order_no" type="text" />
+  </label>
+</form>
+
+</Layout>
