@@ -9,12 +9,12 @@ const { frontmatter } = Astro.props;
 
 <!doctype html>
 <html class="bg-slate-900" lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <style is:global>
       h1,h2,h3,h4,h5,h6 {
         line-height: 1.4em;
@@ -34,8 +34,8 @@ const { frontmatter } = Astro.props;
         border: 1px solid hsl(0, 0%, 65%);
       }
     </style>
-		<meta name="generator" content={Astro.generator} />
-		<title>{frontmatter.title}</title>
+    <meta name="generator" content={Astro.generator} />
+    <title>{frontmatter.title}</title>
     <script>
       // On page load or when changing themes, best to add inline in `head` to avoid FOUC
       if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -53,13 +53,13 @@ const { frontmatter } = Astro.props;
       // Whenever the user explicitly chooses to respect the OS preference
       localStorage.removeItem('theme')
     </script>
-	</head>
-	<body class="bg-slate-100 text-slate-950 dark:bg-slate-950 dark:text-slate-50 m-0 font-sans max-w-[1800px] mx-auto">
+  </head>
+  <body class="bg-slate-100 text-slate-950 dark:bg-slate-950 dark:text-slate-50 m-0 font-sans max-w-[1800px] mx-auto">
     <NavMenu />
     <Banner />
     <div class="mt-8 lg:mx-20 mx-8 lg:gap-10 grid lg:grid-cols-[2fr_1fr] grid-cols-1 [&_a]:text-[darkgreen] [&_a:visited]:text-[purple]">
       <div class="mb-8">
-		    <slot />
+        <slot />
       </div>
       <div class="grid gap-6 max-w-[400px] mx-auto h-fit mb-12">
         <Announcements />
@@ -79,5 +79,5 @@ const { frontmatter } = Astro.props;
         }
       });
     </script>
-	</body>
+  </body>
 </html>
